@@ -2,7 +2,7 @@ const app = require('express')();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-const EditorSocketIOServer = require('ot/lib/editor-socketio-server');
+const EditorSocketIOServer = require('./lib/editor-socketio-server');
 
 const document = require('./sourceDoc');
 const otserver = new EditorSocketIOServer(document, [], 1);
